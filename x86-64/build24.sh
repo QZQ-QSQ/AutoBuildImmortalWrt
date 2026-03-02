@@ -63,7 +63,7 @@ PACKAGES="$PACKAGES luci-app-openclash"
 PACKAGES="$PACKAGES luci-i18n-ksmbd-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-sqm-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-qbittorrent-zh-cn"
-PACKAGES="$PACKAGES AdGuardHome"
+PACKAGES="$PACKAGES luci-i18n-AdGuardHome-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-vlmcsd-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-dockerman-zh-cn"
 # 文件管理器
