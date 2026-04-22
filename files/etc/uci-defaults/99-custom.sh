@@ -41,8 +41,8 @@ echo "Interface count: $count" >>$LOGFILE
 board_name=$(cat /tmp/sysinfo/board_name 2>/dev/null || echo "unknown")
 echo "Board detected: $board_name" >>$LOGFILE
 
-wan_ifname=""
-lan_ifnames=""
+wan_ifname="eth1,eth3"
+lan_ifnames="eth0,eth2"
 # 此处特殊处理个别开发板网口顺序问题
 case "$board_name" in
     "radxa,e20c"|"friendlyarm,nanopi-r5c")
