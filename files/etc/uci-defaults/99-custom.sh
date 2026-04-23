@@ -41,8 +41,8 @@ echo "Interface count: $count" >>$LOGFILE
 board_name=$(cat /tmp/sysinfo/board_name 2>/dev/null || echo "unknown")
 echo "Board detected: $board_name" >>$LOGFILE
 
-wan_ifname="eth1,eth3"
-lan_ifnames="eth0,eth2"
+wan_ifname=""
+lan_ifnames=""
 # 此处特殊处理个别开发板网口顺序问题
 case "$board_name" in
     "radxa,e20c"|"friendlyarm,nanopi-r5c")
@@ -52,7 +52,7 @@ case "$board_name" in
         ;;
     *)
         # 默认第一个接口为WAN，其余为LAN
-        wan_ifname=$(echo "$ifnames" | awk '{print $1}')
+        wan_ifname=$(echo "$ifnames" | awk '{print $2}')
         lan_ifnames=$(echo "$ifnames" | cut -d ' ' -f2-)
         echo "Using default mapping: WAN=$wan_ifname LAN=$lan_ifnames" >>"$LOGFILE"
         ;;
